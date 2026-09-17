@@ -1,0 +1,1242 @@
+@import url('https://fonts.googleapis.com/css2?family=Mont:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=The+Bold+Font&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Mont', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0d0b0a;
+  color: #f5f3f0;
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(18, 15, 13, 0.92);
+  backdrop-filter: blur(8px);
+  position: relative;
+  width: 100%;
+  z-index: 10;
+  border-bottom: 1px solid rgba(139, 107, 85, 0.2);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  cursor: pointer;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+
+.nav-links button {
+  background: transparent;
+  border: 1px solid transparent;
+  color: #f5f3f0;
+  padding: .5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: .9rem;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.nav-links button:hover,
+.nav-links button.active {
+  background-color: rgba(139, 107, 85, .15);
+  border-color: rgba(139, 107, 85, .3);
+}
+
+.hero-fixed-banner {
+  height: 100vh;
+  width: 100%;
+  background-image: url('assets/fondo.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem 2rem;
+  z-index: 1;
+}
+
+.hero-fixed-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 11, 10, .82);
+}
+
+.hero-split-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1150px;
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.hero-title-big {
+  font-family: 'The Bold Font', sans-serif;
+  font-size: 4rem;
+  line-height: 1.05;
+  margin-bottom: 1rem;
+  color: #fff !important;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.font-amber {
+  color: #9c7151 !important;
+}
+
+.about-text {
+  color: #d1c7be;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.hero-highlights {
+  display: flex;
+  gap: 1.5rem;
+  font-size: .95rem;
+  color: #e5ded7;
+}
+
+.modern-tracking-card {
+  background: rgba(22, 19, 17, .9);
+  border: 1px solid rgba(139, 107, 85, .35);
+  padding: 1.8rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0,0,0,.6);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.modern-tracking-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #9c7151;
+}
+
+.card-icon-header {
+  font-size: 1.8rem;
+  margin-bottom: .5rem;
+  color: #9c7151;
+}
+
+.modern-tracking-card h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: .4rem;
+}
+
+.subtitle {
+  color: #b3a69c;
+  font-size: .88rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.search-form-modern {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper i {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9e9187;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.input-wrapper input {
+  width: 100%;
+  background-color: rgba(10,8,7,.7);
+  border: 1px solid #38302b;
+  border-radius: 8px;
+  padding: .75rem 1rem .75rem 2.6rem !important;
+  color: #fff;
+  outline: none;
+  font-size: .95rem;
+}
+
+.input-wrapper input:focus {
+  border-color: #9c7151;
+  box-shadow: 0 0 0 2px rgba(156,113,81,.2);
+}
+
+.btn-primary-modern {
+  background: #875f42;
+  color: #fff;
+  border: none;
+  padding: .7rem 1.2rem;
+  font-size: .9rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background .2s, transform .2s;
+  box-shadow: 0 4px 10px rgba(0,0,0,.3);
+}
+
+.btn-primary-modern:hover {
+  background: #9c7151;
+  transform: translateY(-1px);
+}
+
+.btn-primary-modern:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.result-box-modern {
+  margin-top: 1.2rem;
+  background: rgba(13,11,10,.6);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(139,107,85,.2);
+  text-align: left;
+}
+
+.result-mueble {
+  font-size: 1.1rem;
+  margin-top: 6px;
+  color: #fff;
+}
+
+.result-cliente {
+  font-size: .85rem;
+  color: #a3a3a3;
+}
+
+.result-status-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  font-size: .85rem;
+  border-top: 1px solid rgba(255,255,255,.05);
+  padding-top: 8px;
+}
+
+.progress-pill {
+  background: rgba(156,113,81,.15);
+  color: #c49a7a;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: .8rem;
+  border: 1px solid rgba(156,113,81,.3);
+}
+
+.black-content-container {
+  position: relative;
+  background-color: #0d0b0a;
+  z-index: 10;
+  min-height: 80vh;
+}
+
+.content-section {
+  padding: 5rem 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.section-inner {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+}
+
+.section-inner h2 {
+  font-size: 1.8rem;
+  margin-bottom: .5rem;
+  font-weight: 700;
+}
+
+
+/* ============================================================
+   PORTAFOLIO PÚBLICO
+============================================================ */
+
+.portfolio-section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.portfolio-inner {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.portfolio-heading {
+  margin-bottom: 2.5rem;
+}
+
+.portfolio-icon {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto .8rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(156,113,81,.12);
+  border: 1px solid rgba(156,113,81,.3);
+  color: #9c7151;
+  font-size: 1.3rem;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  text-align: left;
+  width: 100%;
+}
+
+.portfolio-card {
+  background: #14110f;
+  border: 1px solid #29231f;
+  border-radius: 13px;
+  overflow: hidden;
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(156,113,81,.5);
+  box-shadow: 0 15px 30px rgba(0,0,0,.35);
+}
+
+.portfolio-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: #090807;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.portfolio-media img,
+.portfolio-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-video-badge {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  background: rgba(0,0,0,.75);
+  color: #fff;
+  padding: 5px 9px;
+  border-radius: 6px;
+  font-size: .72rem;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.portfolio-card-body {
+  padding: 1rem;
+}
+
+.portfolio-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: .4rem;
+}
+
+.portfolio-card-description {
+  font-size: .8rem;
+  line-height: 1.5;
+  color: #aaa099;
+}
+
+.portfolio-empty,
+.portfolio-loading {
+  grid-column: 1 / -1;
+  padding: 3rem 1rem;
+  text-align: center;
+  color: #77706a;
+}
+
+.portfolio-loading {
+  display: flex;
+  flex-direction: column;
+  gap: .7rem;
+  align-items: center;
+}
+
+.portfolio-loading i {
+  color: #9c7151;
+  font-size: 1.4rem;
+}
+
+
+/* ============================================================
+   VISOR FLOTANTE (LIGHTBOX)
+============================================================ */
+
+#hn-portfolio-viewer {
+  box-sizing: border-box;
+}
+
+#hn-portfolio-content {
+  max-width: 90vw;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#hn-portfolio-content .visor-title {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  text-align: center;
+  padding: 0 10px;
+}
+
+#hn-portfolio-content img,
+#hn-portfolio-content video {
+  max-width: 100%;
+  max-height: 75vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+#hn-portfolio-prev,
+#hn-portfolio-next {
+  width: 40px !important;
+  height: 40px !important;
+  font-size: 24px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  #hn-portfolio-prev {
+    left: 10px !important;
+  }
+  #hn-portfolio-next {
+    right: 10px !important;
+  }
+  #hn-portfolio-content {
+    width: calc(100% - 80px) !important;
+    height: calc(100% - 100px) !important;
+  }
+}
+
+
+/* ============================================================
+   PASOS
+============================================================ */
+
+.steps-grid-5 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.step-box {
+  background: #14110f;
+  border: 1px solid #26211d;
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: border-color .3s;
+}
+
+.step-box:hover {
+  border-color: rgba(156,113,81,.5);
+}
+
+.step-icon {
+  font-size: 1.5rem;
+  color: #9c7151;
+  margin-bottom: .75rem;
+}
+
+.step-title {
+  font-weight: 700;
+  font-size: .95rem;
+  margin-bottom: .4rem;
+}
+
+.step-desc {
+  font-size: .8rem;
+  color: #b3a69c;
+  line-height: 1.4;
+}
+
+
+/* ============================================================
+   MODALES Y CONTENEDORES GENERALES
+============================================================ */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.85);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem 1.5rem;
+  overflow-y: auto;
+}
+
+.modal-box {
+  background: #161311;
+  border: 1px solid rgba(156,113,81,.35);
+  border-radius: 14px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 850px;
+  margin: auto;
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0,0,0,.9);
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  color: #b3a69c;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: #fff;
+}
+
+
+/* ============================================================
+   INPUTS
+============================================================ */
+
+select,
+.admin-select,
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="email"],
+input[type="month"],
+textarea {
+  width: 100%;
+  background-color: #0d0b0a;
+  border: 1px solid #332b25;
+  border-radius: 8px;
+  padding: .7rem .9rem;
+  color: #fff;
+  outline: none;
+  font-size: .9rem;
+  font-family: 'Mont',sans-serif;
+}
+
+select:focus,
+.admin-select:focus,
+input:focus,
+textarea:focus {
+  border-color: #9c7151;
+  background-color: #120f0d;
+  box-shadow: 0 0 0 2px rgba(156,113,81,.12);
+}
+
+input[type="number"],
+input[type="date"] {
+  min-height: 44px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #77706a;
+}
+
+
+/* ============================================================
+   ADMINISTRACIÓN
+============================================================ */
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.admin-header h2 {
+  margin: 0;
+}
+
+.logout-btn {
+  background: transparent;
+  border: 1px solid #ef4444;
+  color: #ef4444;
+  padding: 5px 9px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.admin-management-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.admin-form {
+  background: rgba(255,255,255,.03);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.admin-form h3 {
+  font-size: 1rem;
+  margin-bottom: .75rem;
+}
+
+.codigo-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.small-btn {
+  padding: 0 10px;
+  font-size: .8rem;
+}
+
+.admin-fields-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.field-group label {
+  font-size: .75rem;
+  color: #9c7151;
+}
+
+.financial-summary,
+.income-summary {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.summary-box {
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid;
+}
+
+.summary-box span {
+  display: block;
+  font-size: .78rem;
+  margin-bottom: 3px;
+}
+
+.summary-box strong {
+  font-size: 1rem;
+}
+
+.summary-box.blue {
+  background: rgba(56,189,248,.08);
+  border-color: rgba(56,189,248,.25);
+  color: #38bdf8;
+}
+
+.summary-box.amber {
+  background: rgba(245,158,11,.08);
+  border-color: rgba(245,158,11,.25);
+  color: #f59e0b;
+}
+
+.summary-box.red {
+  background: rgba(239,68,68,.08);
+  border-color: rgba(239,68,68,.25);
+  color: #ef4444;
+}
+
+.summary-box.green {
+  background: rgba(74,222,128,.08);
+  border-color: rgba(74,222,128,.25);
+  color: #4ade80;
+}
+
+.full-btn {
+  width: 100%;
+}
+
+.registered-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: .5rem;
+}
+
+.registered-title h3 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.projects-list {
+  max-height: none;
+  overflow-y: visible;
+}
+
+
+/* ============================================================
+   GESTIÓN PORTAFOLIO
+============================================================ */
+
+.portfolio-admin-modal {
+  max-width: 900px;
+}
+
+.portfolio-admin-title {
+  padding-right: 30px;
+}
+
+.portfolio-form {
+  background: rgba(255,255,255,.025);
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.portfolio-form textarea {
+  resize: vertical;
+  margin-top: 8px;
+}
+
+.upload-box {
+  margin-top: 10px;
+  border: 1px dashed rgba(156,113,81,.45);
+  border-radius: 10px;
+  background: rgba(156,113,81,.04);
+  transition: .2s;
+}
+
+.upload-box:hover {
+  border-color: #9c7151;
+  background: rgba(156,113,81,.08);
+}
+
+.upload-label {
+  min-height: 115px;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.upload-label i {
+  color: #9c7151;
+  font-size: 1.5rem;
+}
+
+.upload-label span {
+  color: #fff;
+  font-weight: 700;
+}
+
+.upload-label small {
+  color: #8c837c;
+  font-size: .72rem;
+}
+
+.upload-label input {
+  display: none;
+}
+
+.portfolio-files-preview {
+  display: grid;
+  grid-template-columns: repeat(4,minmax(0,1fr));
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.file-preview {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #080706;
+  border: 1px solid #332b25;
+}
+
+.file-preview img,
+.file-preview video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.file-preview-type {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  background: rgba(0,0,0,.75);
+  color: #fff;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-size: .65rem;
+}
+
+.portfolio-upload-progress {
+  margin: 15px 0;
+}
+
+.upload-progress-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: .75rem;
+  color: #aaa;
+  margin-bottom: 5px;
+}
+
+.progress-track {
+  width: 100%;
+  height: 7px;
+  background: #29231f;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background: #9c7151;
+  transition: width .2s ease;
+}
+
+.portfolio-admin-list-title {
+  margin-top: 1.5rem;
+  margin-bottom: .7rem;
+}
+
+.portfolio-admin-list-title h3 {
+  font-size: 1rem;
+}
+
+.portfolio-admin-card {
+  display: grid;
+  grid-template-columns: 110px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  background: rgba(255,255,255,.035);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 9px;
+  padding: 9px;
+  margin-bottom: 7px;
+}
+
+.portfolio-admin-thumb {
+  width: 110px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  background: #080706;
+}
+
+.portfolio-admin-info strong {
+  display: block;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.portfolio-admin-info p {
+  color: #888;
+  font-size: .75rem;
+  line-height: 1.4;
+}
+
+.portfolio-admin-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.delete-portfolio-btn {
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  padding: 7px 9px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+/* ============================================================
+   INGRESOS
+============================================================ */
+
+.income-title {
+  padding-right: 35px;
+}
+
+.income-filter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 15px 0;
+}
+
+.income-filter label {
+  display: block;
+  font-size: .75rem;
+  color: #a3a3a3;
+  margin-bottom: 4px;
+}
+
+.income-pdf-button {
+  display: flex;
+  align-items: end;
+}
+
+.income-pdf-button button {
+  width: 100%;
+}
+
+
+/* ============================================================
+   FINANZAS
+============================================================ */
+
+.financial-box {
+  width: 100%;
+  min-height: 78px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 13px 15px;
+  border-radius: 9px;
+}
+
+.admin-action-btn {
+  border: none;
+  padding: .42rem .58rem;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: .78rem;
+}
+
+
+/* ============================================================
+   VISTAS DEL PANEL DE ADMINISTRACIÓN - PANTALLAS INDEPENDIENTES
+============================================================ */
+
+#admin-panel {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+#admin-vista-inicio,
+#admin-vista-nuevo-proyecto,
+#admin-vista-ingresos,
+#admin-vista-portafolio {
+  display: none;
+  width: 100% !important;
+  background: #14110f !important;
+  border: 1px solid #29231f !important;
+  border-radius: 16px !important;
+  padding: 2.5rem 2rem !important;
+  margin-top: 2rem !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+#admin-vista-inicio.active-view,
+#admin-vista-nuevo-proyecto.active-view,
+#admin-vista-ingresos.active-view,
+#admin-vista-portafolio.active-view {
+  display: block !important;
+}
+
+
+/* ============================================================
+   UTILIDADES
+============================================================ */
+
+.hidden {
+  display: none !important;
+}
+
+.badge {
+  background: rgba(156,113,81,.15);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: .75rem;
+  color: #c49a7a;
+  font-family: monospace;
+  border: 1px solid rgba(156,113,81,.3);
+}
+
+.error-msg {
+  background: rgba(239,68,68,.15);
+  color: #f87171;
+  border: 1px solid rgba(239,68,68,.3);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: .85rem;
+  margin-top: 10px;
+}
+
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
+.footer {
+  border-top: 1px solid #221c18;
+  background: #090706;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.footer p {
+  color: #b3a69c;
+  font-size: .9rem;
+  margin-bottom: 1rem;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.btn-social {
+  text-decoration: none;
+  color: #fff;
+  padding: .6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: .85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.btn-ig {
+  background: linear-gradient(45deg,#7c3aed,#db2777);
+}
+
+.copyright {
+  color: #665b53 !important;
+  font-size: .75rem !important;
+}
+
+
+/* ============================================================
+   WHATSAPP
+============================================================ */
+
+.whatsapp-floating {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  width: 58px;
+  height: 58px;
+  background: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 2rem;
+  z-index: 9999;
+  box-shadow: 0 6px 20px rgba(0,0,0,.45);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.whatsapp-floating:hover {
+  transform: scale(1.08);
+}
+
+
+/* ============================================================
+   RESPONSIVE GENERAL
+============================================================ */
+
+@media (max-width: 900px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: .75rem 1rem;
+  }
+
+  .nav-links {
+    gap: .3rem;
+  }
+
+  .nav-links button {
+    padding: .4rem .6rem;
+    font-size: .8rem;
+  }
+
+  .hero-fixed-banner {
+    height: auto !important;
+    min-height: 100vh;
+    padding-top: 90px !important;
+    padding-bottom: 3rem;
+  }
+
+  .hero-split-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .hero-title-big {
+    font-size: 2.7rem !important;
+  }
+
+  .hero-highlights {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .portfolio-card {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+  .admin-fields-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .financial-summary,
+  .income-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-files-preview {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+
+  .portfolio-admin-card {
+    grid-template-columns: 80px 1fr;
+  }
+
+  .portfolio-admin-thumb {
+    width: 80px;
+    height: 65px;
+  }
+
+  .portfolio-admin-actions {
+    grid-column: 1 / -1;
+  }
+
+  .income-filter {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-box {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .whatsapp-floating {
+    width: 54px;
+    height: 54px;
+    right: 16px;
+    bottom: 16px;
+    font-size: 1.8rem;
+  }
+}
